@@ -344,7 +344,7 @@ void *mm_realloc(void *ptr, size_t size)
 #endif
 #ifdef BEST_FIT
             best_fitp = newptr;
-#endif                     // next_fit 사용을 위한 포인터 동기화
+#endif
             mm_free(ptr);  // 기존의 블록은 Free block으로 바꾼다
             return newptr; // 새롭게 할당된 주소의 포인터를 반환
         }
